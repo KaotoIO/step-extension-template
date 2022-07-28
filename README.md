@@ -4,6 +4,8 @@ You can use this template as the base to create your own step extensions.
 
 After cloning your repository, you must run a `yarn install` to get the dependencies needed.
 
+Everytime you push changes to your main branch, a new version of the plugin will be published on the github pages of your repository. For example, this template is published on https://kaotoio.github.io/step-extension/
+
 ## Available Scripts
 
 In the project directory, you can run:
