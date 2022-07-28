@@ -1,6 +1,8 @@
 # step extension
 
-A simple React app made with create-react-app.
+You can use this template as the base to create your own step extensions.
+
+After cloning your repository, you must run a `yarn install` to get the dependencies needed.
 
 ## Available Scripts
 
