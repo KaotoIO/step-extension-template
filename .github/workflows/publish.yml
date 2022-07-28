@@ -2,10 +2,8 @@ name: 🧩 Publish step extension 🧩
 
 on:
   push:
-#    branches: [ main ]
+    branches: [ main ]
   workflow_dispatch:
-  schedule:
-    - cron:  '23 0 * * *'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
