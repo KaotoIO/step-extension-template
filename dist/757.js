@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstepextension=self.webpackChunkstepextension||[]).push([[757],{757:function(e,t,n){n.r(t);var o=n(407);const s={backgroundColor:"crimson",color:"white",borderRadius:"25px",border:0,padding:"20px"};t.default=e=>o.createElement("button",{className:"superButton",style:s,onClick:e.onButtonClicked},"Best Button EVAR")}}]);
