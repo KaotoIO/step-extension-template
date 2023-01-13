@@ -35,11 +35,7 @@
     "build": "webpack --mode production",
     "serve": "serve dist -p 3002",
     "clean": "rm -rf dist",
-    "startbu": "react-scripts start",
-    "buildbu": "react-scripts build",
-    "testbu": "react-scripts test",
-    "ejectbu": "react-scripts eject",
-    "test": "jest --coverage src/**/*.test.ts*"
+    "test": "jest --mode=development --coverage src/**/*.test.ts*"
   },
   "eslintConfig": {
     "extends": [
