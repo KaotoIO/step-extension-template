@@ -14,7 +14,6 @@ export type Props = {
 }
 
 const Button = (props: Props) => {
-  //() => console.log('BANANAS!')
   return (
     <button className={'superButton'} style={buttonStyling} onClick={props.onButtonClicked}>Best Button EVAR</button>
   )
