@@ -15,9 +15,6 @@ module.exports = {
   output: {
     publicPath: "auto",
   },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js"],
-  },
   module: {
     rules: [
       {
@@ -28,12 +25,16 @@ module.exports = {
         },
       },
       {
-        test: /\.tsx?$/,
-        loader: "babel-loader",
-        exclude: /node_modules/,
-        options: {
-          presets: ["@babel/preset-react", "@babel/preset-typescript"],
-        },
+        test: /\.(tsx|ts|jsx)?$/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+              experimentalWatchApi: true,
+            },
+          },
+        ],
       },
     ],
   },
@@ -50,4 +51,14 @@ module.exports = {
       template: "./public/index.html",
     }),
   ],
+  resolve: {
+    cacheWithContext: false,
+    extensions: ['.js', '.ts', '.tsx', '.jsx'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, './tsconfig.json'),
+      }),
+    ],
+    symlinks: false,
+  },
 };

@@ -1,9 +1,9 @@
 import * as React from 'react';
 // @ts-ignore
 import css from './App.css';
-import LocalButton from './Button';
+import { Button } from './Button';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -11,9 +11,7 @@ function App() {
           A very awesome Step Extension.
         </p>
       </header>
-      <LocalButton />
+      <Button />
     </div>
   );
 }
-
-export default App;

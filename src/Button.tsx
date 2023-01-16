@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 const buttonStyling = {
   backgroundColor: 'crimson',
   // backgroundColor: 'BlueViolet',
@@ -13,11 +11,9 @@ export type Props = {
   onButtonClicked?: () => void;
 }
 
-const Button = (props: Props) => {
+export const Button = (props: Props) => {
   return (
     <button className={'superButton'} style={buttonStyling} onClick={props.onButtonClicked}>Best Button EVAR</button>
   )
 };
-
-export default Button;
 
