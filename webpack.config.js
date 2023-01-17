@@ -1,7 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin =
   require("webpack").container.ModuleFederationPlugin;
+const { dependencies } = require('./package.json');
 const path = require("path");
+const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
 
 module.exports = {
   entry: "./src/index",
@@ -45,7 +47,7 @@ module.exports = {
       exposes: {
         "./Button": "./src/Button",
       },
-      shared: ["react", "react-dom"],
+      shared: [{"react": { requiredVersion: dependencies["react"] }}, {"react-dom": { requiredVersion: dependencies["react-dom"] }}],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -61,4 +63,5 @@ module.exports = {
     ],
     symlinks: false,
   },
+  stats: 'errors-warnings',
 };
