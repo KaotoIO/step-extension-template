@@ -1,4 +1,3 @@
-import * as React from 'react';
 // @ts-ignore
 import css from './App.css';
 import { Button } from './Button';

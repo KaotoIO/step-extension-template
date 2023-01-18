@@ -20,13 +20,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /bootstrap\.tsx$/,
-        loader: "bundle-loader",
-        options: {
-          lazy: true,
-        },
-      },
-      {
         test: /\.(tsx|ts|jsx)?$/,
         use: [
           {
