@@ -10,14 +10,14 @@ module.exports = {
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
 
-  transform: {
-    '\\.(ts|tsx)$': 'ts-jest',
+  moduleNameMapper: {
+    '\\.(css|less)$': path.resolve(__dirname, './src/__mocks__/styleMock.js'),
   },
-
-  roots: ['<rootDir>'],
 
   // A preset that is used as a base for Jest's configuration
   preset: 'ts-jest',
+
+  roots: ['<rootDir>'],
 
   // The path to a module that runs some code to configure or set up the testing framework before each test
   setupFilesAfterEnv: [path.resolve(__dirname, 'src', './setupTests.ts')],
@@ -25,4 +25,8 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   testMatch:["<rootDir>/src/*.test.{js,jsx,ts,tsx}"],
+
+  transform: {
+    '\\.(ts|tsx)$': 'ts-jest',
+  },
 };
