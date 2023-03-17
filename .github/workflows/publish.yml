@@ -27,7 +27,7 @@ jobs:
       - name: 🏠 Checkout repository
         uses: actions/checkout@v3
       - name: Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
       - name: 🪢 Install dependencies
         run: yarn install
       - name: 🔧 Build
